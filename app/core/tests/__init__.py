@@ -1,0 +1,1 @@
+"""Tests core init file"""
