@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core",
+    "rest_framework",
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -132,3 +134,20 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # define custom user model
 
 AUTH_USER_MODEL = "core.User"
+
+# Open Api Configuration
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "RECIPE APP REST API",
+    "DESCRIPTION": "A complete template DRF API for learn DRF concept : API, Models, TESTS, TDD, mock Swagger, user manage, docker django...",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": True,
+    "CONTACT": {
+        "name": "Clerc",
+        "url": "test@clerc.com",
+        "email": "co26teme@gmail.com",
+    },
+}
